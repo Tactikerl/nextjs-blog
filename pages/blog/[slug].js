@@ -10,12 +10,11 @@ export default function Blog({ frontmatter, markdown}) {
         <title>Demo Blog | {frontmatter.title}</title>
       </Head>
       <h1>{frontmatter.title}</h1>
-      <span>{frontmatter.date}</span>
-      <span>{frontmatter.body}</span>
+      <span>{frontmatter.date}</span>      
       <span>{frontmatter.image}</span>
       <span>{frontmatter.heading}</span>
       <span>{frontmatter.subheading}</span>
-      <span>{frontmatter.mainpitch}</span>
+      {/* <span>{frontmatter.mainpitch}</span> */}
       <hr />
       <ReactMarkdown>
         {markdown}
