@@ -1,6 +1,15 @@
 ---
-title: "My First Blog"
+title: My First Blog
 date: 24, August, 2021
+heading: vzvzxv
+subheading: zxvzxv
+mainpitch:
+  title: zxv
+  description: zxvzxv
+description: zxvxzvz
+intro:
+  heading: zxvzxv
+  description: zxvzxvzxv
 ---
 
 # Welcome to my blog
