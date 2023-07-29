@@ -1,11 +1,21 @@
 .container {
   text-align: center;
-  padding-top: 10rem;
-  color: #445566;
+  background-image: url("../public/images/Instrumentbytte.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;  
+  
 }
 
-.header {
+.logo {
+  vertical-align: text-top;
+  padding-bottom: 5rem;
+}
+
+.logo-text {
   font-size: 3rem;
+  ;
 }
 
 .subtitle {
@@ -21,4 +31,21 @@
 .blog-list a {
   color: rgb(4, 165, 165);
   text-decoration: underline;
+}
+
+.menu a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  padding: 0;
+}
+
+.menu li {
+list-style: none;
+flex: 1 1 auto;
 }

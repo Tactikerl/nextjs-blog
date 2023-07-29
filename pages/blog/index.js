@@ -2,24 +2,24 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 
-export default function Home({ blogs }) {
+export default function Blog({ blogs }) {
   return (<div className={styles['container']}>
     <Head>
-      <title>Sture & Tormod Halvorsens legat</title>
+      <title>Demo Blog</title>
     </Head>
-    <div className={styles['logo']}><h1 className={styles['logo-text']}>Sture Halvorsens legat for musikkstuderende i Finnmark</h1>
-    </div>
-    <ul className={styles['menu']}>
-      <li><Link href="/about">Om oss</Link></li>
-      <li><Link href="/gallery">Galleri</Link></li>
-      <li><Link href="/legal">Vedtekter</Link></li>
-      <li><Link href="/application">Søknad</Link></li>
-      <li><Link href="/blog">Blog</Link></li>
-    </ul>
+    <h1 className={styles['header']}>Sture Halvorsens legat for musikkstuderende i Finnmark</h1>
     <p className={styles['subtitle']}>Dette er ett testmiljø der utvikler vil teste funksjonalitet og design før ferdig produksjon publiseres</p>
-    
+    <ul className={styles['blog-list']}>
+      {blogs.map(blog => (
+        <li key={blog.slug}>
+          <Link href={`/blog/${blog.slug}`}>
+            {blog.date}:{blog.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
   </div>)
 }
 
