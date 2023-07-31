@@ -1,25 +1,60 @@
 .container {
   text-align: center;
-  background-image: url("../public/images/Instrumentbytte.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../public/images/Instrumentbytte.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;  
-  
+  height: 100vh;
 }
-
 .logo {
   vertical-align: text-top;
-  padding-bottom: 5rem;
+  background-color: #00112f;
+  opacity: 0.9;
+  width: 100%;
 }
 
 .logo-text {
   font-size: 3rem;
-  ;
+  color: white;
 }
 
-.subtitle {
-  margin-bottom: 2rem;
+.menuContainer {
+  vertical-align: text-bottom;
+}
+.menu a {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+  flex: 1 1 auto;
+}
+
+.content {
+  margin: 2rem;
+  background-color: black;
+  height: 60vh;
+  width: 70vw;
+  opacity: 0.8;
+}
+
+.content p {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .blog-list {
@@ -31,21 +66,4 @@
 .blog-list a {
   color: rgb(4, 165, 165);
   text-decoration: underline;
-}
-
-.menu a {
-  text-decoration: none;
-  text-align: center;
-}
-
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;  
-  padding: 0;
-}
-
-.menu li {
-list-style: none;
-flex: 1 1 auto;
 }

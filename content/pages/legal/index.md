@@ -21,7 +21,8 @@ main:
   image3:
     alt: asasd
     image: https://img.freepik.com/free-photo/isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg
-image: ""
+image: ''
 description: standalone description
 ---
+
 Here there will be legal dragons and stuff

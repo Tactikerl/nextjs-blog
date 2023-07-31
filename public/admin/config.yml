@@ -2,59 +2,72 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "public/uploads" # Where media files will be stored
-public_folder: "/uploads" # Where the media files can be accessed from the server
-
+media_folder: 'public/uploads' # Where media files will be stored
+public_folder: '/uploads' # Where the media files can be accessed from the server
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "content/blogs" # The path to the folder where the documents are stored
+  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
+    label: 'Blog' # Used in the UI
+    folder: 'content/blogs' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-        - {label: "Body", name: "body", widget: "markdown"}      
-        - {label: Image, name: image,  widget: image, required: false}
-        - {label: Heading, name: heading, widget: string}
-        - {label: Subheading, name: subheading, widget: string}
-        
-        
-        
-      
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          date_format: 'DD.MM.YYYY',
+          time_format: 'HH:mm',
+          format: 'LLL',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: Image, name: image, widget: image, required: false }
+      - { label: Heading, name: heading, widget: string }
+      - { label: Subheading, name: subheading, widget: string }
 
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     files:
-      - file: "content/pages/index.md"
-        label: "Landing Page"
-        name: "index"
+      - file: 'content/pages/index.md'
+        label: 'Landing Page'
+        name: 'index'
         fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
-      - file: "content/pages/about/index.md"
-        label: "About"
-        name: "about"
+      - file: 'content/pages/about/index.md'
+        label: 'About'
+        name: 'about'
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
-      - file: "content/pages/application/index.md"
-        label: "Application"
-        name: "application"
+      - file: 'content/pages/application/index.md'
+        label: 'Application'
+        name: 'application'
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
-      - file: "content/pages/legal/index.md"
-        label: "Legal"
-        name: "legal"
+      - file: 'content/pages/legal/index.md'
+        label: 'Legal'
+        name: 'legal'
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm", format: "LLL"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - {label: Image, name: image,  widget: image, required: false}
-          
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'index-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+              label: 'Publish Date',
+              name: 'date',
+              widget: 'datetime',
+              date_format: 'DD.MM.YYYY',
+              time_format: 'HH:mm',
+              format: 'LLL',
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: Image, name: image, widget: image, required: false }
