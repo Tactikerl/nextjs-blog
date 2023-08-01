@@ -1,10 +1,11 @@
 import fs from 'fs'
 import matter from 'gray-matter'
+import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home({ blogs }) {
+export default function Home({ frontmatter, markdown }) {
   return (
     <div className={styles['container']}>
       <Head>
@@ -35,33 +36,21 @@ export default function Home({ blogs }) {
         </div>
       </div>
       <div className={styles['content']}>
-        <p>
-          Dette er ett testmiljø der utvikler vil teste funksjonalitet og design
-          før ferdig produksjon publiseres
-        </p>
+        <h2>{frontmatter.title}</h2>
+        <ReactMarkdown>{markdown}</ReactMarkdown>
       </div>
     </div>
   )
 }
 
 export async function getStaticProps() {
-  // List of files in blogs folder
-  const filesInBlogs = fs.readdirSync('./content/blogs')
-
-  // Get the front matter and slug (the filename without .md) of all files
-  const blogs = filesInBlogs.map((filename) => {
-    const file = fs.readFileSync(`./content/blogs/${filename}`, 'utf8')
-    const matterData = matter(file)
-
-    return {
-      ...matterData.data, // matterData.data contains front matter
-      slug: filename.slice(0, filename.indexOf('.')),
-    }
-  })
+  const fileContent = matter(
+    fs.readFileSync(`./content/pages/index.md`, 'utf8'),
+  )
+  let frontmatter = fileContent.data
+  const markdown = fileContent.content
 
   return {
-    props: {
-      blogs,
-    },
+    props: { frontmatter, markdown },
   }
 }
