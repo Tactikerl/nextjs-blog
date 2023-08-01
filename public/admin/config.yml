@@ -35,7 +35,6 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-
           - label: "Gallery"
             name: "galleryImages"
              widget: "list"
