@@ -7,7 +7,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: auto;
 }
 .logo {
   vertical-align: text-top;
@@ -45,10 +45,19 @@
 
 .content {
   margin: 2rem;
-  background-color: black;
-  height: 60vh;
+  background-color: rgba(0, 0, 0, 0.7);
   width: 70vw;
-  opacity: 0.8;
+
+  margin: 25px;
+}
+
+.contentList li {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentList li:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .content h2 {
@@ -57,9 +66,10 @@
   padding: 1rem;
 }
 
-.content img {
+.contentImg {
   width: 50%;
   height: 50%;
+  opacity: 1;
 }
 
 .content p {

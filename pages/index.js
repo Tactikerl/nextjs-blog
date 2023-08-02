@@ -38,10 +38,14 @@ export default function Home({ frontmatter, markdown }) {
       <div className={styles['content']}>
         <h2>{frontmatter.title}</h2>
         <ReactMarkdown>{markdown}</ReactMarkdown>
-        <ul>
+        <ul className={styles['contentList']}>
           {frontmatter.galleryImages.map((item, index) => (
             <li key={index}>
-              <img src={item.image} alt={item.alt} />
+              <img
+                src={item.image}
+                className={styles['contentImg']}
+                alt={item.alt}
+              />
               <p>{item.text}</p>
             </li>
           ))}
