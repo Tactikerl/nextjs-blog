@@ -51,6 +51,11 @@
   margin: 25px;
 }
 
+.contentList {
+  list-style: none;
+  padding: 0;
+}
+
 .contentList li {
   display: flex;
   flex-direction: row;
@@ -60,16 +65,27 @@
   flex-direction: row-reverse;
 }
 
-.content h2 {
+.content h2,
+.content h3 {
   color: white;
   font-size: 2rem;
   padding: 1rem;
 }
 
+.imageContainer {
+  flex: 1 1 25%;
+  padding: 1rem;
+}
+
+.textContainer {
+  flex: 2 2 75%;
+}
+
 .contentImg {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   opacity: 1;
+  object-fit: cover;
 }
 
 .content p {
