@@ -8,6 +8,12 @@ import styles from '../styles/Home.module.css'
 export default function Home({ frontmatter, markdown }) {
   return (
     <div className={styles['container']}>
+      <div className={styles['mexicanWall']}>
+        <img
+          src="../images/radiospilling.png"
+          className={styles['mexicanImage']}
+        />
+      </div>
       <Head>
         <title>Sture & Tormod Halvorsens legat</title>
       </Head>
