@@ -24,6 +24,9 @@ export default function Home({ frontmatter, markdown }) {
         <div className={styles['menuContainer']}>
           <ul className={styles['menu']}>
             <li>
+              <Link href="/">Hjem</Link>
+            </li>
+            <li>
               <Link href="/about">Om oss</Link>
             </li>
             <li>
@@ -44,6 +47,23 @@ export default function Home({ frontmatter, markdown }) {
       <div className={styles['content']}>
         <h2>{frontmatter.title}</h2>
         <ReactMarkdown>{markdown}</ReactMarkdown>
+        <ul className={styles['profileList']}>
+          {frontmatter.profileGallery.map((item, index) => (
+            <li key={index}>
+              <div className={styles['imageContainer']}>
+                <img
+                  src={item.image}
+                  className={styles['contentImg']}
+                  alt={item.alt}
+                />
+              </div>
+              <div className={styles['textContainer']}>
+                <h3>{item.name}</h3>
+                <p>{item.text}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )

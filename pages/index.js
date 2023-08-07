@@ -24,6 +24,11 @@ export default function Home({ frontmatter, markdown }) {
         <div className={styles['menuContainer']}>
           <ul className={styles['menu']}>
             <li>
+              <Link href="/" className={styles['button']}>
+                Hjem
+              </Link>
+            </li>
+            <li>
               <Link href="/about">Om oss</Link>
             </li>
             <li>
