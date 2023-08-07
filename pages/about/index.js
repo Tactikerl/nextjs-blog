@@ -7,14 +7,44 @@ import styles from '../../styles/Home.module.css'
 
 export default function Home({ frontmatter, markdown }) {
   return (
-    <div>
+    <div className={styles['container']}>
+      <div className={styles['mexicanWall']}>
+        <img
+          src="../images/radiospilling.png"
+          className={styles['mexicanImage']}
+        />
+      </div>
       <Head>
-        <title>Demo Blog | {frontmatter.title}</title>
+        <title>Sture & Tormod Halvorsens legat</title>
       </Head>
-      <h1>{frontmatter.title}</h1>
-      <span>{frontmatter.date}</span>
-      <hr />
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <div className={styles['logo']}>
+        <h1 className={styles['logo-text']}>
+          Sture Halvorsens legat for musikkstuderende i Finnmark
+        </h1>
+        <div className={styles['menuContainer']}>
+          <ul className={styles['menu']}>
+            <li>
+              <Link href="/about">Om oss</Link>
+            </li>
+            <li>
+              <Link href="/gallery">Galleri</Link>
+            </li>
+            <li>
+              <Link href="/legal">Vedtekter</Link>
+            </li>
+            <li>
+              <Link href="/application">Søknad</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className={styles['content']}>
+        <h2>{frontmatter.title}</h2>
+        <ReactMarkdown>{markdown}</ReactMarkdown>
+      </div>
     </div>
   )
 }

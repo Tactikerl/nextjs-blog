@@ -50,6 +50,14 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+          - label: 'Profile'
+            name: 'profileGallery'
+            widget: 'list'
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: Image, name: image, widget: image }
+              - { label: 'Alt Text', name: 'alt', widget: 'string' }
+              - { label: 'Text', name: 'text', widget: 'markdown' }
 
       - file: 'content/pages/application/index.md'
         label: 'Application'
