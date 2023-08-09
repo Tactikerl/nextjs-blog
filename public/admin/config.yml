@@ -90,12 +90,12 @@ collections:
 
       - file: 'content/pages/gallery/index.md'
         label: 'Image Gallery'
-        name: 'index'
+        name: 'gallery'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - label: 'Gallery'
-            name: 'galleryImages'
+            name: 'imageGallery'
             widget: 'list'
             fields:
               - { label: 'Title', name: 'title', widget: 'string' }
