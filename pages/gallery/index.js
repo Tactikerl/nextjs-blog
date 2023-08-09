@@ -52,7 +52,7 @@ export default function Home({ frontmatter, markdown }) {
         <h2>{frontmatter.title}</h2>
         <ReactMarkdown>{markdown}</ReactMarkdown>
         <ul className={styles['contentList']}>
-          {frontmatter.galleryImages.map((item, index) => (
+          {frontmatter.imageGallery.map((item, index) => (
             <li key={index}>
               <div className={styles['imageContainer']}>
                 <img
@@ -75,7 +75,7 @@ export default function Home({ frontmatter, markdown }) {
 
 export async function getStaticProps() {
   const fileContent = matter(
-    fs.readFileSync(`./content/pages/index.md`, 'utf8'),
+    fs.readFileSync(`./content/pages/gallery/index.md`, 'utf8'),
   )
   let frontmatter = fileContent.data
   const markdown = fileContent.content
