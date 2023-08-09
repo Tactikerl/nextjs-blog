@@ -88,8 +88,8 @@ collections:
           - { label: 'Body', name: 'body', widget: 'markdown' }
           - { label: Image, name: image, widget: image, required: false }
 
-      - file: 'content/pages/index.md'
-        label: 'Gallery'
+      - file: 'content/pages/gallery/index.md'
+        label: 'Image Gallery'
         name: 'index'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
