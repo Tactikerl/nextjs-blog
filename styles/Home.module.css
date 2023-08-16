@@ -98,6 +98,14 @@
   padding: 1rem;
 }
 
+.galleryList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+}
+
 .imageContainer {
   flex: 1 1 25%;
   padding: 1rem;

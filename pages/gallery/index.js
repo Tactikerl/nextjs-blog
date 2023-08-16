@@ -51,7 +51,7 @@ export default function Home({ frontmatter, markdown }) {
       <div className={styles['content']}>
         <h2>{frontmatter.title}</h2>
         <ReactMarkdown>{markdown}</ReactMarkdown>
-        <ul className={styles['contentList']}>
+        <ul className={styles['galleryList']}>
           {frontmatter.imageGallery.map((item, index) => (
             <li key={index}>
               <div className={styles['imageContainer']}>
