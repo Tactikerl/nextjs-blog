@@ -18,7 +18,7 @@ profileGallery:
 
 
       Morten er opptatt av at musikkgleden som Halvorsenfamilien representerte skal leve videre.
-    image: /uploads/pngitem_307416.png
+    image: /uploads/_kjekkmann.jpg
     alt: profilbilde
 ---
 Tormod og Sture Halvorsens
