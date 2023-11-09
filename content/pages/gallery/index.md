@@ -21,5 +21,9 @@ imageGallery:
     title: Stinn brakke!
     alt: bilde av publikum fra en lokal dans
     text: Bilde fra en av mange bygdefester hvor Snappy Swingers spilte opp til dans.
+  - image: /uploads/terjes-brev.png
+    title: Brev fra Terje
+    alt: Bilde av brev skrevet av Terje Solberg.
+    text: Brev fra Terje Solberg.
 ---
 Her kan du se bilder fra Snappy Swingers sin historie samt at det vil publiseres bilder av mottakere i konsert.
