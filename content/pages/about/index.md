@@ -10,7 +10,11 @@ profileGallery:
     image: /uploads/pngitem_307416.png
     alt: profilbilde
   - name: Morten Bue Svaleng Kvammen
-    text: Styremedlem
+    text: >-
+      Styremedlem
+
+
+      Morten Kvammen er familiens representant i styret og sønn til søskenbarn av Sture og Tormod.
     image: /uploads/pngitem_307416.png
     alt: profilbilde
 ---
