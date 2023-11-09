@@ -15,6 +15,9 @@ profileGallery:
 
 
       Morten Kvammen er familiens representant i styret og sønn til søskenbarn av Sture og Tormod.
+
+
+      Morten er opptatt av at musikkgleden som Halvorsenfamilien representerte skal leve videre.
     image: /uploads/pngitem_307416.png
     alt: profilbilde
 ---
