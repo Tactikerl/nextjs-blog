@@ -6,7 +6,7 @@ For å søke på vårt stipend krever vi at du er musikkstuderende med boadresse
 
 Fyll ut skjemaet under med ditt navn, epost adresse, bosteds addresse og din søknadstekst.
 
-<form action="stureslegat@legat.no" method="get" enctype="text/plain">
+<form action="" method="get" enctype="text/plain">
 
 Søknadstittel(anbefalt: Søknad stipend):<br>
 

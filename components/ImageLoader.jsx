@@ -44,14 +44,14 @@ const images = [
   image19,
   image20,
 ]
-
+// ImageLoader function takes the indexed images and shuffles them randomly.
 const ImageLoader = ({ numberOfImages }) => {
   const getRandomImages = () => {
     const shuffled = [...images].sort(() => 0.5 - Math.random())
     console.log(shuffled)
     return shuffled.slice(0, numberOfImages)
   }
-
+  // Images are assinged to the div with styling.
   const randomImages = getRandomImages()
   return (
     <div className={styles['mexicanHedge']}>
