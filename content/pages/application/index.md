@@ -1,7 +1,6 @@
 ---
 title: Hvordan søke
 ---
-
 For å søke på vårt stipend krever vi at du er musikkstuderende med boadresse i Finnmark fylke.
 
 Fyll ut skjemaet under med ditt navn, epost adresse, bosteds addresse og din søknadstekst.
