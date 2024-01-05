@@ -46,6 +46,9 @@ export default function Home({ frontmatter, markdown }) {
       <div className={styles['content']}>
         <h2>{frontmatter.title}</h2>
         <ReactMarkdown>{markdown}</ReactMarkdown>
+        <form>
+          <input type="text"></input>
+        </form>
       </div>
     </div>
   )

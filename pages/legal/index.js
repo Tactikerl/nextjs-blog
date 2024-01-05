@@ -4,17 +4,49 @@ import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import ImageLoader from '../../components/ImageLoader'
 
 export default function Home({ frontmatter, markdown }) {
   return (
-    <div>
+    <div className={styles['container']}>
+      <ImageLoader numberOfImages={9} />
+
       <Head>
-        <title>Demo Blog | {frontmatter.title}</title>
+        <title>Sture & Tormod Halvorsens legat</title>
       </Head>
-      <h1>{frontmatter.title}</h1>
-      <span>{frontmatter.date}</span>
-      <hr />
-      <ReactMarkdown>{markdown}</ReactMarkdown>
+      <div className={styles['logo']}>
+        <h1 className={styles['logo-text']}>
+          Sture Halvorsens legat for musikkstuderende i Finnmark
+        </h1>
+        <div className={styles['menuContainer']}>
+          <ul className={styles['menu']}>
+            <li>
+              <Link href="/" className={styles['button']}>
+                Hjem
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">Om oss</Link>
+            </li>
+            <li>
+              <Link href="/gallery">Galleri</Link>
+            </li>
+            <li>
+              <Link href="/legal">Vedtekter</Link>
+            </li>
+            <li>
+              <Link href="/application">Søknad</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blog</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className={styles['content']}>
+        <h2>{frontmatter.title}</h2>
+        <ReactMarkdown>{markdown}</ReactMarkdown>
+      </div>
     </div>
   )
 }

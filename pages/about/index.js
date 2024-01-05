@@ -4,18 +4,12 @@ import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
+import ImageLoader from '../../components/ImageLoader'
 
 export default function Home({ frontmatter, markdown }) {
   return (
     <div className={styles['container']}>
-      <div className={styles['mexicanHedge']}>
-        <div className={styles['mexicanWall']}>
-          <img
-            src="../images/radiospilling.png"
-            className={styles['mexicanImage']}
-          />
-        </div>
-      </div>
+      <ImageLoader numberOfImages={9} />
       <Head>
         <title>Sture & Tormod Halvorsens legat</title>
       </Head>

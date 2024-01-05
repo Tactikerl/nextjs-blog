@@ -51,7 +51,7 @@ const ImageLoader = ({ numberOfImages }) => {
     console.log(shuffled)
     return shuffled.slice(0, numberOfImages)
   }
-  // Images are assinged to the div with styling.
+  // Images are assigned to the div with styling.
   const randomImages = getRandomImages()
   return (
     <div className={styles['mexicanHedge']}>
