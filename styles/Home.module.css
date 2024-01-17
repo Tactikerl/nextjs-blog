@@ -107,13 +107,25 @@
   padding: 0;
 }
 
+.galleryList > li {
+  flex: 1;
+  min-width: 250px;
+}
+
+.galleryP {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
 .imageContainer {
   flex: 1 1 25%;
   padding: 1rem;
 }
 
 .textContainer {
-  flex: 2 2 75%;
+  text-overflow: ellipsis;
 }
 
 .contentImg {
