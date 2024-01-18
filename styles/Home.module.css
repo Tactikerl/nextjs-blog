@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-image: url('../public/images/Instrumentbytte.png'); */
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -75,6 +75,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   width: 70vw;
   margin: 25px;
+  background-size: cover;
 }
 
 .contentList {
@@ -122,10 +123,8 @@
 .imageContainer {
   flex: 1 1 25%;
   padding: 1rem;
-}
-
-.textContainer {
-  text-overflow: ellipsis;
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .contentImg {
