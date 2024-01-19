@@ -7,4 +7,4 @@ For å søke på vårt stipend krever vi at du er musikkstuderende med boadresse
 
 
 
-\[søkeher\@mailmail.no] (mailto:søkeher@mailmail.no?subject=Stønadssøknad)
+[søkeher\@mailmail.no] (mailto:søkeher@mailmail.no?subject=Stønadssøknad)
