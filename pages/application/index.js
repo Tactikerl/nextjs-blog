@@ -46,9 +46,9 @@ export default function Home({ frontmatter, markdown }) {
       <div className={styles['content']}>
         <h2>{frontmatter.title}</h2>
         <ReactMarkdown>{markdown}</ReactMarkdown>
-        <form>
-          <input type="text"></input>
-        </form>
+        <p>
+          <a href="mailto:someone@example.com">Send email</a>
+        </p>
       </div>
     </div>
   )
