@@ -5,8 +5,11 @@ import Link from 'next/link'
 import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import ImageLoader from '../../components/ImageLoader'
+import React, { useState } from 'react'
+import { Popup } from '../../components/modal'
 
 export default function Home({ frontmatter, markdown }) {
+  const [open, setOpen] = useState(false)
   return (
     <div className={styles['container']}>
       <ImageLoader numberOfImages={9} />
@@ -52,15 +55,24 @@ export default function Home({ frontmatter, markdown }) {
                 <h3>{item.title}</h3>
                 <img
                   src={item.image}
+                  id="myImg"
                   className={styles['contentImg']}
                   alt={item.alt}
                 />
-
                 <p className={styles['galleryP']}>{item.text}</p>
+                <div>
+                  <button onClick={() => setOpen(true)}>
+                    {' '}
+                    Click to Open Popup
+                  </button>
+                </div>
               </div>
             </li>
           ))}
         </ul>
+        {open ? (
+          <Popup text="Hello there!" closePopup={() => setOpen(false)} />
+        ) : null}
       </div>
     </div>
   )
