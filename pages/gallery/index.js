@@ -10,6 +10,12 @@ import { Popup } from '../../components/modal'
 
 export default function Home({ frontmatter, markdown }) {
   const [open, setOpen] = useState(false)
+  const [selectedImage, setSelectedImage] = useState()
+  const openModalWithImage = (item) => {
+    setSelectedImage(item)
+    setOpen(true)
+  }
+
   return (
     <div className={styles['container']}>
       <ImageLoader numberOfImages={9} />
@@ -58,21 +64,31 @@ export default function Home({ frontmatter, markdown }) {
                   id="myImg"
                   className={styles['contentImg']}
                   alt={item.alt}
+                  style={{ cursor: 'pointer' }}
+                  onClick={() =>
+                    openModalWithImage({
+                      src: item.image,
+                      alt: item.al,
+                      title: item.title,
+                      txt: item.text,
+                    })
+                  }
                 />
                 <p className={styles['galleryP']}>{item.text}</p>
-                <div>
-                  <button onClick={() => setOpen(true)}>
-                    {' '}
-                    Click to Open Popup
-                  </button>
-                </div>
+                <div></div>
               </div>
             </li>
-          ))}
+          ))}{' '}
+          {selectedImage && (
+            <Popup
+              image={selectedImage}
+              closePopup={() => {
+                setSelectedImage()
+                setOpen(false)
+              }}
+            />
+          )}
         </ul>
-        {open ? (
-          <Popup text="Hello there!" closePopup={() => setOpen(false)} />
-        ) : null}
       </div>
     </div>
   )

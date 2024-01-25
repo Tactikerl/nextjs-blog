@@ -93,13 +93,6 @@
   flex-direction: row-reverse;
 }
 
-.content h2,
-.content h3 {
-  color: white;
-  font-size: 2rem;
-  padding: 1rem;
-}
-
 .galleryList {
   list-style: none;
   display: flex;
@@ -139,6 +132,8 @@
 }
 
 .popup-container {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -149,6 +144,15 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 .popup-body {
+  /* display: grid;
+  grid-template-columns: 127px 127px 127px 127px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'title title . close'
+    'image image pgraph pgraph'
+    'image image pgraph pgraph'; */
+  display: flex;
+  flex-direction: row;
   position: absolute;
   left: 30%;
   right: 30%;
@@ -156,13 +160,34 @@
   top: 30%;
   text-align: center;
   margin: auto;
-  border-radius: 15px;
+  border-radius: 5px;
   border-color: black;
-  background: white;
+  background-image: url(https://www.w3schools.com/cssref/paper.gif);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.content p {
+/* .popup-close {
+  grid-area: close;
+} */
+
+.popup-title {
+  color: black;
+}
+
+.popup-img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  object-fit: contain;
+}
+
+.popup-text {
+  color: rgb(0, 0, 0);
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.content {
   color: white;
   font-size: 1.5rem;
   padding: 1rem;
