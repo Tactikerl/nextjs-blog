@@ -71,6 +71,8 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   margin: 2rem;
   background-color: rgba(0, 0, 0, 0.7);
   width: 70vw;
@@ -96,28 +98,39 @@
 .galleryList {
   list-style: none;
   display: flex;
+  flex: 1 1 25%;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0;
 }
 
 .galleryList > li {
-  flex: 1;
+  /* flex: 1 1 25px; */
   min-width: 250px;
 }
 
 .galleryP {
+  display: none;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   max-width: 100%;
 }
 
+.button-container {
+}
+
 .imageContainer {
-  flex: 1 1 25%;
+  flex-direction: column;
+  margin: 0;
   padding: 1rem;
   max-width: 250px;
   max-height: 250px;
+}
+
+.imgGalleryTitle {
+  display: none;
+  margin: 0;
 }
 
 .contentImg {
@@ -144,34 +157,25 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 .popup-body {
-  /* display: grid;
-  grid-template-columns: 127px 127px 127px 127px;
-  grid-template-rows: auto;
-  grid-template-areas:
-    'title title . close'
-    'image image pgraph pgraph'
-    'image image pgraph pgraph'; */
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   position: absolute;
-  left: 30%;
-  right: 30%;
-  bottom: 30%;
-  top: 30%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  top: 5%;
   text-align: center;
   margin: auto;
   border-radius: 5px;
-  border-color: black;
-  background-image: url(https://www.w3schools.com/cssref/paper.gif);
+  border-color: black '';
+  background-color: rgba(0, 0, 0, 0.7);
+
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-/* .popup-close {
-  grid-area: close;
-} */
-
 .popup-title {
-  color: black;
+  color: white;
 }
 
 .popup-img {
@@ -179,6 +183,12 @@
   height: 100%;
   opacity: 1;
   object-fit: contain;
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .popup-text {

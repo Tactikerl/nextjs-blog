@@ -58,7 +58,7 @@ export default function Home({ frontmatter, markdown }) {
           {frontmatter.imageGallery.map((item, index) => (
             <li key={index}>
               <div className={styles['imageContainer']}>
-                <h3>{item.title}</h3>
+                <h3 className={styles['imgGalleryTitle']}>{item.title}</h3>
                 <img
                   src={item.image}
                   id="myImg"
@@ -75,7 +75,6 @@ export default function Home({ frontmatter, markdown }) {
                   }
                 />
                 <p className={styles['galleryP']}>{item.text}</p>
-                <div></div>
               </div>
             </li>
           ))}{' '}
