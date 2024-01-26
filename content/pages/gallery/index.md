@@ -1,23 +1,23 @@
 ---
 title: Dette er bildegalleriet
 imageGallery:
-  - image: /uploads/snappy-jenter.jpg
+  - image: /uploads/snappy-jenter.png
     title: Musikalske Jenter
     alt: jenter med instrumenter
     text: Fire ukjente jenter med instrumentene til Snappy Swingers
-  - image: /uploads/snappy-swingers-øver.jpg
+  - image: /uploads/snappy-swingers-øver.png
     title: I øvingslokalet
     alt: musikere som øver
     text: Gutta øver til bygdedansen
-  - image: /uploads/park.jpg
+  - image: /uploads/park.png
     title: Solfylt dag i park
     alt: bilde fra ukjent park med brostein
     text: Bilde fra en ukjent park. Solen skinner
-  - image: /uploads/lokalradio-innspilling.jpg
+  - image: /uploads/lokalradio-innspilling.png
     title: Innspilling hos lokalradioen
     alt: snappy swingers spiller inn hos lokalradio
     text: Snappy Swingers er her å spiller inn låter til lokalradioen
-  - image: /uploads/folkemengde.jpg
+  - image: /uploads/dans-på-brakka-folkemengden.png
     title: Stinn brakke!
     alt: bilde av publikum fra en lokal dans
     text: Bilde fra en av mange bygdefester hvor Snappy Swingers spilte opp til dans.
