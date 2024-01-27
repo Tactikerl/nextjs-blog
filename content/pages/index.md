@@ -1,7 +1,7 @@
 ---
 title: Første Post på forsiden
 galleryImages:
-  - image: /uploads/instrumentbytte.jpg
+  - image: /uploads/snappy-swingers-poserer.png
     alt: Bildet av bandet
     text: Her er ett bilde av bandet.
     title: Snappy Swingers Poserer
