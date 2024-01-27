@@ -50,6 +50,7 @@ export default function Home({ frontmatter, markdown }) {
           <a href="mailto:someone@example.com">Send email</a>
         </p>
       </div>
+      <footer className={styles['footer']}></footer>
     </div>
   )
 }
