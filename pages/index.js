@@ -25,44 +25,57 @@ export default function Home({ frontmatter, markdown }) {
               </Link>
             </li>
             <li>
-              <Link href="/about">Om oss</Link>
+              <Link href="/about" className={styles['button']}>
+                Om oss
+              </Link>
             </li>
             <li>
-              <Link href="/gallery">Galleri</Link>
+              <Link href="/gallery" className={styles['button']}>
+                Galleri
+              </Link>
             </li>
             <li>
-              <Link href="/legal">Vedtekter</Link>
+              <Link href="/legal" className={styles['button']}>
+                Vedtekter
+              </Link>
             </li>
             <li>
-              <Link href="/application">Søknad</Link>
+              <Link href="/application" className={styles['button']}>
+                Søknad
+              </Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog" className={styles['button']}>
+                Blog
+              </Link>
             </li>
           </ul>
         </div>
       </div>
       <div className={styles['content']}>
-        <h2>{frontmatter.title}</h2>
-        <ReactMarkdown>{markdown}</ReactMarkdown>
-        <ul className={styles['contentList']}>
-          {frontmatter.galleryImages.map((item, index) => (
-            <li key={index}>
-              <div className={styles['imageContainer']}>
-                <img
-                  src={item.image}
-                  className={styles['contentImg']}
-                  alt={item.alt}
-                />
-              </div>
-              <div className={styles['textContainer']}>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <div className={styles['content-container']}>
+          <h2>{frontmatter.title}</h2>
+          <ReactMarkdown>{markdown}</ReactMarkdown>
+          <ul className={styles['contentList']}>
+            {frontmatter.galleryImages.map((item, index) => (
+              <li key={index}>
+                <div className={styles['imageContainer']}>
+                  <img
+                    src={item.image}
+                    className={styles['contentImg']}
+                    alt={item.alt}
+                  />
+                </div>
+                <div className={styles['textContainer']}>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+      <footer className={styles['footer']}></footer>
     </div>
   )
 }

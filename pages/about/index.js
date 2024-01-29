@@ -20,22 +20,34 @@ export default function Home({ frontmatter, markdown }) {
         <div className={styles['menuContainer']}>
           <ul className={styles['menu']}>
             <li>
-              <Link href="/">Hjem</Link>
+              <Link href="/" className={styles['button']}>
+                Hjem
+              </Link>
             </li>
             <li>
-              <Link href="/about">Om oss</Link>
+              <Link href="/about" className={styles['button']}>
+                Om oss
+              </Link>
             </li>
             <li>
-              <Link href="/gallery">Galleri</Link>
+              <Link href="/gallery" className={styles['button']}>
+                Galleri
+              </Link>
             </li>
             <li>
-              <Link href="/legal">Vedtekter</Link>
+              <Link href="/legal" className={styles['button']}>
+                Vedtekter
+              </Link>
             </li>
             <li>
-              <Link href="/application">Søknad</Link>
+              <Link href="/application" className={styles['button']}>
+                Søknad
+              </Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blog" className={styles['button']}>
+                Blog
+              </Link>
             </li>
           </ul>
         </div>
@@ -61,6 +73,7 @@ export default function Home({ frontmatter, markdown }) {
           ))}
         </ul>
       </div>
+      <footer className={styles['footer']}></footer>
     </div>
   )
 }
